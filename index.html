@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>The Shim Shamblers</title>
+
+    <script>
+
+        function reavealFor(elementId) {
+            var elementToReveal = document.getElementById(elementId);
+
+            elementToReveal.classList.remove('hiddenPerformance');
+        }
+
+        function hide(elementId) {
+            var elementToHide = document.getElementById(elementId);
+
+            elementToHide.classList.add('hiddenPerformance');
+        }
+
+        function iframeLoadSetWidth() {
+
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #000000;
+            color: #aaaaaa;
+        }
+
+        .hero img {
+            width: 100%;
+        }
+
+        .left {
+            text-align: left;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .right {
+            text-align: right;
+        }
+
+        .center-column {
+            width: 100%;
+        }
+
+        .hiddenPerformance {
+            display: none;
+        }
+
+        .embed-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+        }
+
+        .embed-container iframe,
+        .embed-container object,
+        .embed-container embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-4 left">
+                <h1>The Shim Shamblers</h1>
+            </div>
+            <div class="col-md-4 left center-column">
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4 hero center-column">
+                <div id="performanceImage" onclick="reavealFor('performanceVideo');hide('performanceImage');">
+                    <img src='https://scontent-lhr3-1.xx.fbcdn.net/v/t31.0-8/27913227_220237215205145_7965962283325768509_o.jpg?oh=8687e5454581ec93147135b755632c87&oe=5B02D7B6'
+                    />
+                </div>
+
+                <div id="performanceVideo" class='embed-container hiddenPerformance'>
+                    <iframe src='https://www.youtube.com/embed/3xVhyUp5vpY' frameborder='0' allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-6"></div>
+            <div class="col-md-6 right">
+                <h2>Bristol based authentic solo jazz troupe inspired by the great gentlemen dancers of the classic swing era.
+                    <br/>
+                    <br/>...but mostly we're all about having fun :)</h2>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
